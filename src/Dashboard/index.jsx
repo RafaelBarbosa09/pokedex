@@ -7,16 +7,22 @@ export function Dashboard() {
 
   useEffect(() => {
     api.get('pokemon').then(response => {
-      setPokemons(response.data.results);
+      const results = response.data.results;
+
+      results.forEach(async pokemon => {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
+        const data = await res.json();
+        setPokemons(currentList => [...currentList, data]);
+      });
     })
   }, []);
 
   return (
     <div>
-      {pokemons.map((poke, index) => (
+      {pokemons.map((pokemon, index) => (
         <ul key={index}>
-          <li>{poke.name}</li>
-          <li><a href={poke.url}>link</a></li>
+          <li>{pokemon.name}</li>
+          <img src={pokemon.sprites.back_default} />
         </ul>
       ))}
     </div>
