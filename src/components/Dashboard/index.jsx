@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import api from "../services/api";
+import api from "../../services/api";
+import { Container } from "./styles";
 
 export function Dashboard() {
   const [pokemons, setPokemons] = useState([]);
@@ -18,13 +19,13 @@ export function Dashboard() {
   }, []);
 
   return (
-    <div>
+    <Container>
       {pokemons.map((pokemon, index) => (
         <ul key={index}>
           <li>{pokemon.name}</li>
           <img src={pokemon.sprites.back_default} />
         </ul>
       ))}
-    </div>
+    </Container>
   );
 }
