@@ -5,8 +5,7 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <MdSearch />
-        <input placeholder="Search a pokemón" />
+        <h1>Pokedex</h1>
       </Content>
     </Container>
   )
