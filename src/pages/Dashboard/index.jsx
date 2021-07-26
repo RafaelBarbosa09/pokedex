@@ -23,10 +23,10 @@ export default function Dashboard() {
   return (
     <>
       <Header />
-      <Link to={'pokeprofile'}>
-        <Container>
-          {pokemons.map((pokemon, index) => (
-            <Card key={index}>
+      <Container>
+        {pokemons.map((pokemon, index) => (
+          <Card key={index}>
+            <Link to={'pokeprofile'}>
               <CardBody>
                 <img src={pokemon.sprites.back_default} alt="Pokemon" />
                 <p>{pokemon.name}</p>
@@ -38,10 +38,10 @@ export default function Dashboard() {
                   </Types>
                 ))}
               </CardFooter>
-            </Card>
-          ))}
-        </Container>
-      </Link>
+            </Link>
+          </Card>
+        ))}
+      </Container>
     </>
   );
 }
