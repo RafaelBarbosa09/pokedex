@@ -4,10 +4,16 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --card-body: #ffffff;
     --background: #F4F3EF;
+    --header-bg: #212120;
     --gray: #6e6d7a;
-    --black: #0d0c22;
-    --red: #e52e4d;
-    --green: #33cc95;
+    --text: #252422;
+    --red: #dc3545;
+    --green: #6bd098;
+    --purple: #6f42c1;
+    --orange: #fd7e14;
+    --cyan: #17a2b8;
+    --blue: #007bff;
+    --yellow: #ffc107;
   }
 
   * {
@@ -35,12 +41,15 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
   }
+
   h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 600;
+    font-weight: 700;
   }
+  
   button {
     cursor: pointer;
   }
+  
   [disabled] {
     opacity: 0.6;
     cursor: not-allowed;

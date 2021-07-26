@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 import api from "../../services/api";
-import { Container } from "./styles";
+import { Card, CardBody, CardFooter, Container, Types } from "./styles";
 
 export function Dashboard() {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    api.get('pokemon').then(response => {
+    api.get('pokemon?limit=21').then(response => {
       const results = response.data.results;
 
       results.forEach(async pokemon => {
@@ -21,10 +21,19 @@ export function Dashboard() {
   return (
     <Container>
       {pokemons.map((pokemon, index) => (
-        <ul key={index}>
-          <li>{pokemon.name}</li>
-          <img src={pokemon.sprites.back_default} />
-        </ul>
+        <Card key={index}>
+          <CardBody>
+            <img src={pokemon.sprites.back_default} alt="Pokemon" />
+            <p>{pokemon.name}</p>
+          </CardBody>
+          <CardFooter>
+            {pokemon.types.map((type, index) => (
+              <Types key={index}>
+                <p className={`${type.type.name}`}>{type.type.name}</p>
+              </Types>
+            ))}
+          </CardFooter>
+        </Card>
       ))}
     </Container>
   );
