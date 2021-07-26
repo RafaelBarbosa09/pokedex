@@ -1,12 +1,15 @@
-import { Dashboard } from "./components/Dashboard";
+import { Dashboard } from "./pages/Dashboard";
 import { Header } from "./components/Header";
 import { GlobalStyle } from "./styles/global";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 
-export function App() {
+export default function App() {
   return (
     <>
-      <Header />
-      <Dashboard />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
       <GlobalStyle />
     </>
   );

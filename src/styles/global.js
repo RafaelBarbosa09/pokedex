@@ -49,6 +49,11 @@ export const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
   
   [disabled] {
     opacity: 0.6;

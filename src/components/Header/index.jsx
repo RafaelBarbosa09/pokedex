@@ -5,7 +5,7 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
       </Content>
     </Container>
   )
