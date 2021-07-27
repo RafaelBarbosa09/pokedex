@@ -7,7 +7,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Dashboard} />
-      <Route path="/pokeprofile" component={PokeProfile} />
+      <Route path="/pokeprofile/:pokemon+" component={PokeProfile} />
     </Switch>
   );
 }

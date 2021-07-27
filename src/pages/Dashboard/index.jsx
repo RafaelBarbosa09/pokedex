@@ -26,9 +26,9 @@ export default function Dashboard() {
       <Container>
         {pokemons.map((pokemon, index) => (
           <Card key={index}>
-            <Link to={'pokeprofile'}>
+            <Link to={`pokeprofile/${pokemon.name}`}>
               <CardBody>
-                <img src={pokemon.sprites.back_default} alt="Pokemon" />
+                <img src={pokemon.sprites.front_default} alt="Pokemon" />
                 <p>{pokemon.name}</p>
               </CardBody>
               <CardFooter>

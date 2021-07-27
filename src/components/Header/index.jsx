@@ -1,5 +1,4 @@
 import { Container, Content } from "./styles";
-import { MdSearch } from 'react-icons/md';
 
 export function Header() {
   return (
