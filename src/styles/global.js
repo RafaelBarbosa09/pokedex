@@ -45,6 +45,14 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 700;
   }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
   
   button {
     cursor: pointer;
@@ -55,8 +63,9 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--text);
   }
   
-  [disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
+  .arrowLeft {
+    color: var(--text);
+    margin: 1rem;
+    cursor: pointer;
   }
 `;
