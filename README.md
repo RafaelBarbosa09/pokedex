@@ -6,12 +6,12 @@ __No diretório do projeto, rode os seguintes comandos:__
 
 ### `URL da aplicação`
 A aplicação está publicada no Heroku.\
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+Abra [https://pokedexexample-frontend.herokuapp.com/](https://pokedexexample-frontend.herokuapp.com/) para rodar no seu navegador.
 
 ### `yarn start`
 
 Roda a aplicação no navegador local.\
-Abra [https://pokedexexample-frontend.herokuapp.com/](https://pokedexexample-frontend.herokuapp.com/) para rodar no seu navegador.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 ### `yarn run cypress open`
 Roda os testes de interface utilizando o Cypress Test Runner. \
