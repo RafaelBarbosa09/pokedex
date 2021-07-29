@@ -28,31 +28,27 @@ export default function PokeProfile() {
       <Container>
         <Card >
           <CardBody>
-            <img src={pokemon.sprites ? pokemon.sprites.front_default : ''} alt="Pokemon" />
+            <img src={pokemon.sprites?.front_default} alt="Pokemon" />
             <h1>{pokemon.name}</h1>
           </CardBody>
           <CardFooter>
-            {pokemon.types && pokemon.types.length > 0 ? pokemon.types.map((type, index) => {
-              return (
-                <Types key={index}>
-                  <p className={`${type.type.name}`}>{type.type.name}</p>
-                </Types>
-              );
-            }) : ''}
+            {pokemon.types?.map((type, index) => (
+              <Types key={index}>
+                <p className={`${type.type.name}`}>{type.type.name}</p>
+              </Types>
+            ))}
           </CardFooter>
         </Card>
 
         <Card >
           <h2>Stats</h2>
           <Stats>
-            {pokemon.stats && pokemon.stats.length > 0 ? pokemon.stats.map((stat, index) => {
-              return (
-                <div key={index}>
-                  <p>{stat.stat.name}</p>
-                  <CircularProgressbar value={stat.base_stat} text={stat.base_stat} />
-                </div>
-              );
-            }) : ''}
+            {pokemon.stats?.map((stat, index) => (
+              <div key={index}>
+                <p>{stat.stat.name}</p>
+                <CircularProgressbar value={stat.base_stat} text={stat.base_stat} />
+              </div>
+            ))}
           </Stats>
         </Card>
 
@@ -66,13 +62,11 @@ export default function PokeProfile() {
             <p>{pokemon.height}</p>
 
             <strong>abilities</strong>
-            {pokemon.abilities && pokemon.abilities.length > 0 ? pokemon.abilities.map((hab, index) => {
-              return (
-                <div key={index}>
-                  <p>{hab.ability.name}</p>
-                </div>
-              );
-            }) : ''}
+            {pokemon.abilities?.map((hab, index) => (
+              <div key={index}>
+                <p>{hab.ability.name}</p>
+              </div>
+            ))}
           </CardBody>
         </Card>
       </Container>
